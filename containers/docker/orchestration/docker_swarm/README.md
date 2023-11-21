@@ -1,0 +1,3 @@
+## Docker Swarm
+
+O Docker Swarm é uma ferramenta de orquestração nativa do Docker que simplifica o gerenciamento de aplicativos baseados em contêineres em clusters distribuídos. Ele coordena a execução de contêineres em nós de gerenciamento e nós de trabalho, permitindo que os serviços sejam escalonados automaticamente, balanceados e atualizados de maneira contínua. Ao criar um cluster, o Swarm oferece alta disponibilidade, distribuição de tarefas entre os nós e integração com o Docker Compose, facilitando a implantação e o dimensionamento de aplicativos em containers de forma eficiente e segura.

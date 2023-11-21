@@ -1,0 +1,3 @@
+# Infrastructure Provisioning
+
+Ferramentas desta categoria são usadas para provisionar infraestrutura em provedores de nuvem. Isso inclui DNS, rede, políticas de segurança, servidores, contêineres e uma série de construções específicas de cada fornecedor. Nessa categoria, é fortemente incentivado o uso de ferramentas independentes de fornecedor de nuvem. Essas habilidades podem ser aplicadas em diversos provedores de nuvem, enquanto as linguagens de domínio mais específicas costumam ter alcance mais limitado.

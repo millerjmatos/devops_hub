@@ -1,0 +1,3 @@
+# RDS
+
+O Amazon RDS (Relational Database Service) é um serviço de banco de dados relacional oferecido pela Amazon Web Services (AWS), que simplifica a configuração, operação e escalabilidade de bancos de dados relacionais na nuvem. Ele é compatível com diversos mecanismos de banco de dados populares, incluindo MySQL, PostgreSQL, Oracle, Microsoft SQL Server e Amazon Aurora (um mecanismo de banco de dados compatível com MySQL e PostgreSQL desenvolvido pela AWS). 

@@ -1,0 +1,3 @@
+# AWS
+
+A Amazon Web Services (AWS) é uma plataforma de computação em nuvem fornecida pela Amazon. Ela oferece uma ampla gama de serviços, como armazenamento de dados, processamento de dados, serviços de banco de dados, hospedagem de aplicativos, inteligência artificial e muito mais. Com a AWS, você pode executar seus aplicativos e armazenar seus dados de forma escalável, flexível e segura na nuvem, eliminando a necessidade de gerenciar e manter infraestrutura física. A AWS é amplamente utilizada por empresas de todos os tamanhos, desde startups até grandes corporações, para impulsionar a inovação, reduzir custos e aumentar a eficiência operacional.

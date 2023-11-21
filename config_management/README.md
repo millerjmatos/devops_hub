@@ -1,0 +1,5 @@
+# Configuration Management
+
+O gerenciamento de configuração é um processo de engenharia de sistemas para estabelecer a consistência dos atributos de um produto ao longo de sua vida. No mundo da tecnologia, o gerenciamento de configuração é um processo de gerenciamento de TI que rastreia itens de configuração individuais de um sistema de TI. Os sistemas de TI são compostos por ativos de TI que variam em granularidade. Um ativo de TI pode representar um software, um servidor ou um conjunto de servidores. O foco a seguir é no gerenciamento de configuração aplicado diretamente aos ativos de software de TI e ao CI/CD de ativos de software.
+
+O gerenciamento de configuração de software é um processo de engenharia de sistemas que rastreia e monitora mudanças nos metadados de configuração de sistemas de software. No desenvolvimento de software, o gerenciamento de configuração é comumente usado junto com controle de versão e infraestrutura de CI/CD. Este texto enfoca sua aplicação moderna e uso em ambientes de software ágeis de CI/CD.

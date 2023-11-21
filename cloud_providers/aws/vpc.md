@@ -1,0 +1,3 @@
+# VPC
+
+O Amazon VPC (Virtual Private Cloud) é um serviço de rede fornecido pela Amazon Web Services (AWS) que possibilita a criação de uma rede virtual isolada na nuvem da AWS, conferindo total controle sobre o ambiente de rede para recursos e instâncias de serviços. Com o VPC, é viável estabelecer uma topologia de rede personalizada que inclui sub-redes, tabelas de roteamento, gateways e regras de acesso. Isso permite a criação de uma rede virtual que se assemelha a uma rede tradicional em um ambiente local, porém com a flexibilidade e escalabilidade proporcionadas pela nuvem. O VPC pode ser integrado a outros serviços da AWS, como Amazon EC2, Amazon RDS e Amazon S3, permitindo a comunicação eficiente entre recursos dentro da VPC.

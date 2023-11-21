@@ -1,0 +1,3 @@
+# EC2
+
+O Amazon EC2 é um serviço de computação em nuvem altamente escalável fornecido pela AWS. Ele permite aos usuários criar e gerenciar instâncias de servidores virtuais com configurações personalizadas de CPU, memória, armazenamento e rede. Com flexibilidade para executar diferentes sistemas operacionais, o EC2 é adequado para uma variedade de cargas de trabalho, desde hospedagem de sites até aplicações complexas. Além disso, ele oferece opções de armazenamento, como EBS, S3 e EFS, e integra-se a outros serviços da AWS, permitindo a criação de ambientes altamente eficientes e adaptáveis para atender às demandas variáveis dos usuários.

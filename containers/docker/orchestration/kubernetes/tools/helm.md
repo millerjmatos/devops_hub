@@ -1,0 +1,1 @@
+Helm é um gerenciador de pacotes para Kubernetes que ajuda na definição, implantação e atualização de aplicativos em contêineres em clusters Kubernetes. Ele permite que você empacote aplicativos Kubernetes em charts Helm, que são conjuntos de recursos definidos em arquivos YAML.

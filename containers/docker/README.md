@@ -1,0 +1,3 @@
+## Docker
+
+O Docker é uma plataforma de virtualização de contêineres que permite aos desenvolvedores empacotar, distribuir e executar aplicativos em ambientes isolados e portáteis. O Docker fornece uma maneira de empacotar um aplicativo e todas as suas dependências em um único objeto, chamado de contêiner, que pode ser facilmente transferido e executado em diferentes sistemas operacionais e infraestruturas. O uso de contêineres Docker torna o desenvolvimento, implantação e escalabilidade de aplicativos bem mais eficiente.

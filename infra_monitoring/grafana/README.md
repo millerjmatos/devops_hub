@@ -1,0 +1,3 @@
+## Grafana
+
+Grafana é uma plataforma de visualização de dados e análise que permite monitorar e analisar dados de diversas fontes em tempo real. Ele oferece um conjunto de ferramentas gráficas para criar dashboards personalizados e painéis interativos para monitoramento de sistemas, aplicações, redes, bancos de dados e muito mais. O Grafana suporta uma ampla variedade de fontes de dados, incluindo bancos de dados SQL, Prometheus, Elasticsearch, InfluxDB e muitos outros, tornando-o uma ferramenta de análise de dados altamente flexível e customizável.
