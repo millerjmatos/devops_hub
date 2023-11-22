@@ -4,7 +4,7 @@ O docker compose é uma ferramenta para definir e executar aplicativos docker co
 
 Alguns dos benefícios incluem:
 
-Gerenciamento simplificado de conteiners: O docker compose permite definir e configurar todos os seus serviços, redes e volumes em um único lugar, facilitando o gerenciamento e a manutenção.
+Gerenciamento simplificado de containers: O docker compose permite definir e configurar todos os seus serviços, redes e volumes em um único lugar, facilitando o gerenciamento e a manutenção.
 
 Compatibilidade: compartilhe seu arquivo docker-compose.yml com outros para garantir que eles tenham o mesmo ambiente e serviços em execução que você.
 
