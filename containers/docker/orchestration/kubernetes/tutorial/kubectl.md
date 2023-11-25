@@ -86,4 +86,4 @@ Em pod multi container:
 
 Executando um command:
 
-    kubectl run my-nginx --image=nginx --command -- /bin/sh -c "echo 'Olá, Kubernetes!'"
+    kubectl run my-nginx --image nginx --command -- /bin/sh -c "echo 'Olá, Kubernetes!'"
