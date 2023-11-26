@@ -11,11 +11,13 @@ Argumentos passados para o container:
     command: ["/bin/sh"]
     args: ["-c", "while true; do echo hello; sleep 10;done"]
 
-Testando:
+Executando um command:
 
-    kubectl run nome-do-pod --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env
+    kubectl run <nome-do-pod> --image nginx --command -- /bin/sh -c "echo 'Olá, Kubernetes!'"
 
-    kubectl run nome-do-pod --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env > command.yaml
+    kubectl run <nome-do-pod> --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env
+
+    kubectl run <nome-do-pod> --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env > command.yaml
 
 Executando:
 
@@ -27,7 +29,7 @@ Verificando os logs:
 
 Modificando:
 
-    kubectl run nome-do-pod --image nginx --command --dry-run=client -o yaml -- /bin/sh -c "sleep 1d" > command.yaml
+    kubectl run <nome-do-pod> --image nginx --command --dry-run=client -o yaml -- /bin/sh -c "sleep 1d" > command.yaml
 
     kubectl apply -f command.yaml --force
 

@@ -14,9 +14,11 @@ Baixando a ferramenta de linha de comando do kubernetes:
         
     sudo mv kubectl /usr/local/bin/
 
-Criando o pod:
+Criando o primeiro pod:
 
-    kubectl run nginx-pod --image nginx:latest
+    kubectl run <nome-do-pod> --image <imagem:tag>
+
+    kubectl run primeiro-pod --image nginx:latest
 
 Verificando antes criar:
 
@@ -24,9 +26,9 @@ Verificando antes criar:
 
 Criando o pod com a saída do manifesto:
 
-    kubectl run nginx-pod --image nginx -o yaml --dry-run=client > nginx-pod.yaml
+    kubectl run <nome-do-pod> --image nginx -o yaml --dry-run=client > <nome-do-arquivo>.yaml
     
-    kubectl apply -f nginx-pod.yaml
+    kubectl apply -f <nome-do-arquivo>.yaml
 
 Imprimindo informações sobre os pods em execução:
 
@@ -38,9 +40,9 @@ Imprimindo informações sobre os pods em execução:
 
 Examinando o pod:
 
-    kubectl describe pod nginx-pod
+    kubectl describe pod <nome-do-pod>
 
-    kubectl get pod nginx-pod -o yaml
+    kubectl get pod <nome-do-pod> -o yaml
 
 Fazendo replace de um pod após a edição, maneira rápida:
 
@@ -48,7 +50,7 @@ Fazendo replace de um pod após a edição, maneira rápida:
 
 Editando o pod:
 
-    kubectl edit pod nginx-pod
+    kubectl edit pod <nome-do-pod>
 
     kubectl get pod nome-do-pod -o yaml > pod.yaml ; vim pod.yaml
 
@@ -72,18 +74,26 @@ Deletando o pod criado de maneira declarativa:
 
     kubectl delete -f ./primeiro-pod.yaml
 
-Executando um pod de maneira interativa:
+Executando um comando dentro de um pod:
 
-    kubectl exec -it nome-do-container -- bash
+    kubectl exec -it <nome-do-pod> -- <comando>
 
-Em pod multi container:
+    kubectl exec -it <nome-do-pod> --container <nome-do-container> -- <comando>
 
-    kubectl exec -it nome-do-pod --container nome-do-container -- bash
-
-    kubectl exec -it nome-do-pod -c nginx -- bash
+    kubectl exec -it <nome-do-pod> -c <nome-do-container> -- <comando>
 
         curl localhost:80
 
-Executando um command:
+Imprimindo informações do cluster:
 
-    kubectl run my-nginx --image nginx --command -- /bin/sh -c "echo 'Olá, Kubernetes!'"
+    kubectl cluster-info
+
+    kubectl api-resources
+
+Imprimindo informações sobre os nós do cluster:
+
+    kubectl get nodes
+
+Imprimindo logs de um pod:
+
+    kubectl logs <nome-do-pod>
