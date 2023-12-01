@@ -11,3 +11,5 @@ Rico's cheatsheets: https://devhints.io/
 Gitignore: https://www.toptal.com/developers/gitignore
 
 Python Fluente, Segunda Edição (2023): https://pythonfluente.com/
+
+Google Cloud Skills Boost: https://www.cloudskillsboost.google/
