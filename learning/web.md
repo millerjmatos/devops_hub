@@ -9,3 +9,5 @@ Conventional Commits Pattern: https://medium.com/linkapi-solutions/conventional-
 Rico's cheatsheets: https://devhints.io/
 
 Gitignore: https://www.toptal.com/developers/gitignore
+
+Python Fluente, Segunda Edição (2023): https://pythonfluente.com/
