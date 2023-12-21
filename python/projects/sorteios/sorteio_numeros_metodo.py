@@ -34,3 +34,12 @@ def sortear_numeros():
 # Exemplo de uso
 numeros_sorteados = sortear_numeros()
 print("Números sorteados:", numeros_sorteados)
+
+# Adicionar os números sorteados ao arquivo sem excluir o conteúdo existente
+with open('resultados.txt', 'a') as arquivo:
+    for i, numero in enumerate(numeros_sorteados, start=1):
+        arquivo.write(str(numero))
+        if i % 6 == 0:
+            arquivo.write('\n')
+        else:
+            arquivo.write(' ')
