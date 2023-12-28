@@ -5,7 +5,7 @@ def tem_consecutivos(nums):
 
 def gerar_sorteio():
     while True:
-        numeros_disponiveis = [num for num in range(1, 61) if num not in [2, 9, 18, 19, 26, 28, 44, 45, 48, 50]]
+        numeros_disponiveis = [num for num in range(1, 61) if num not in [2, 9, 18, 19, 26, 28, 44, 45, 48, 50] and num not in [4, 7, 16, 35, 46, 54]]
         
         impares = [num for num in numeros_disponiveis if num % 2 != 0]
         pares = [num for num in numeros_disponiveis if num % 2 == 0]
