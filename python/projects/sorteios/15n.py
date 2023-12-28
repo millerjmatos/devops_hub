@@ -6,17 +6,20 @@ def soma_volante(nums):
 
 def gerar_sorteio():
     while True:
-        numeros_disponiveis = [num for num in range(1, 26) if num not in [5, 21]]
+        numeros_disponiveis = [num for num in range(1, 26)]
         
         impares = [num for num in numeros_disponiveis if num % 2 != 0]
         pares = [num for num in numeros_disponiveis if num % 2 == 0]
 
-        num_imp = random.sample(impares, 8)
-        num_par = random.sample(pares, 7)
+        random.shuffle(impares)
+        random.shuffle(pares)
 
-        # Junte todos os números escolhidos, ordene-os e verifique se há consecutivos
+        num_imp = impares[:8]
+        num_par = pares[:7]
+
+        # Junte todos os números escolhidos, ordene-os
         numeros_sorteados = sorted(num_imp + num_par)
-        if not soma_volante(numeros_sorteados):
+        if soma_volante(numeros_sorteados):
             break
 
     return numeros_sorteados
