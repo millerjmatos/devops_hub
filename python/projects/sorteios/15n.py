@@ -11,11 +11,8 @@ def gerar_sorteio():
         impares = [num for num in numeros_disponiveis if num % 2 != 0]
         pares = [num for num in numeros_disponiveis if num % 2 == 0]
 
-        random.shuffle(impares)
-        random.shuffle(pares)
-
-        num_imp = impares[:8]
-        num_par = pares[:7]
+        num_imp = random.sample(impares, 8)
+        num_par = random.sample(pares, 7)
 
         # Junte todos os números escolhidos, ordene-os
         numeros_sorteados = sorted(num_imp + num_par)
