@@ -1,37 +1,35 @@
 import random
 
-# 2 (dois) conjuntos vazios para armazenar números pares e ímpares:
-numeros_pares = set()
-numeros_impares = set()
+def soma_volante(nums):
+    soma = sum(nums)
+    return 171 <= soma <= 220
 
-# Loop para gerar 8 números pares aleatórios sem repetição:
-while len(numeros_pares) < 8:
-    numero = random.randint(1, 25)
-    if numero % 2 == 0 and numero not in numeros_pares:
-        numeros_pares.add(numero)
+def gerar_sorteio():
+    while True:
+        numeros_disponiveis = [num for num in range(1, 26) if num not in [5, 21]]
+        
+        impares = [num for num in numeros_disponiveis if num % 2 != 0]
+        pares = [num for num in numeros_disponiveis if num % 2 == 0]
 
-# Loop para gerar 8 números ímpares aleatórios sem repetição:
-while len(numeros_impares) < 8:
-    numero = random.randint(1, 25)
-    if numero % 2 == 1 and numero not in numeros_impares:
-        numeros_impares.add(numero)
+        num_imp = random.sample(impares, 8)
+        num_par = random.sample(pares, 7)
 
-# Convertemos os conjuntos em listas para que possamos combiná-las:
-numeros_pares = list(numeros_pares)
-numeros_impares = list(numeros_impares)
+        # Junte todos os números escolhidos, ordene-os e verifique se há consecutivos
+        numeros_sorteados = sorted(num_imp + num_par)
+        if not soma_volante(numeros_sorteados):
+            break
 
-# Combina as duas listas para obter a lista final com 16 números mistos:
-numeros_sorteados = numeros_pares + numeros_impares
+    return numeros_sorteados
 
-# Ordena a lista final em ordem crescente:
-numeros_sorteados.sort()
+# Exemplo de uso
+resultado_sorteio = gerar_sorteio()
+print("Números Sorteados:", resultado_sorteio)
 
-# Imprime a lista final de 16 números em ordem crescente:
-print(numeros_sorteados)
-
-# Abre o arquivo 'sorteados.txt' no modo 'append' e escreve o resultado nele:
-with open('sorteados.txt', 'a') as arquivo:
-    # Converte os números em strings para escrevê-los no arquivo.
-    numeros_formatados = [str(numero) for numero in numeros_sorteados]
-    # Escreve os números no arquivo, separados por vírgulas e seguidos de uma quebra de linha:
-    arquivo.write(', '.join(numeros_formatados) + '\n')
+# Adicionar os números sorteados ao arquivo sem excluir o conteúdo existente
+with open('resultados.txt', 'a') as arquivo:
+    for i, numero in enumerate(resultado_sorteio, start=1):
+        arquivo.write(str(numero))
+        if i % 15 == 0:
+            arquivo.write('\n')
+        else:
+            arquivo.write(' ')
