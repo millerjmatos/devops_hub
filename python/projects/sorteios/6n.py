@@ -3,13 +3,16 @@ import random
 def tem_consecutivos(nums):
     return any(nums[i] + 1 == nums[i + 1] for i in range(len(nums) - 1))
 
+# Fonte: https://www.mazusoft.com.br/mega/tabela-soma.php
 def soma_volante(nums):
     soma = sum(nums)
-    return 104 <= soma <= 226
+    return 145 <= soma <= 226
 
+# Fonte: https://www.mazusoft.com.br/mega/tabela-par-impar.php
+# Fonte: https://www.mazusoft.com.br/mega/tabela-sequencia-atraso.php
 def gerar_sorteio():
     while True:
-        numeros_disponiveis = [num for num in range(1, 61) if num not in [2, 9, 18, 19, 26, 28, 44, 45, 48, 50] and num not in [4, 7, 16, 35, 46, 54]]
+        numeros_disponiveis = [num for num in range(1, 61) if num not in [2, 9, 18, 19, 28, 44, 50] and num not in [21, 24, 33, 41, 48, 56]]
         
         impares = [num for num in numeros_disponiveis if num % 2 != 0]
         pares = [num for num in numeros_disponiveis if num % 2 == 0]
