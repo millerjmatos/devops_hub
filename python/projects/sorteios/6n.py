@@ -10,6 +10,7 @@ def soma_volante(nums):
 
 # Fonte: https://www.mazusoft.com.br/mega/tabela-par-impar.php
 # Fonte: https://www.mazusoft.com.br/mega/tabela-sequencia-atraso.php
+# Fonte: https://www.mazusoft.com.br/mega/tabela-repetidas.php
 def gerar_sorteio():
     while True:
         numeros_disponiveis = [num for num in range(1, 61) if num not in [2, 9, 18, 19, 28, 44, 50] and num not in [21, 24, 33, 41, 48, 56]]
