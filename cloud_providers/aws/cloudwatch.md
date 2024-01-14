@@ -1,3 +1,0 @@
-# CloudWatch
-
-O CloudWatch permite que você monitore a saúde e o desempenho dos seus recursos na AWS, como instâncias do Amazon EC2, bancos de dados do Amazon RDS, serviços do Amazon S3, entre outros. Ele coleta dados de métricas, como utilização de CPU, uso de memória, tráfego de rede e muito mais, e permite visualizar essas métricas em gráficos personalizados em um painel de controle. O Amazon CloudWatch é uma ferramenta poderosa para monitorar e solucionar problemas em tempo real, ajudando a garantir a disponibilidade, o desempenho e a escalabilidade dos recursos na nuvem da AWS.

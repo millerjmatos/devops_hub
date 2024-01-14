@@ -1,3 +1,0 @@
-# ECS
-
-O Amazon ECS (Elastic Container Service) é um serviço da AWS que possibilita a orquestração de contêineres em uma escala confiável e altamente disponível na nuvem. Ele permite a execução e o gerenciamento de aplicativos conteinerizados usando o Docker, com suporte para clusters de contêineres e a opção do Amazon Fargate, que oferece a execução de contêineres sem a necessidade de gerenciar a infraestrutura subjacente. Com o ECS, os usuários podem criar, implantar e dimensionar aplicativos em contêineres de maneira mais eficiente e simplificada.
