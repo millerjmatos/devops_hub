@@ -87,10 +87,19 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl top pods
     kubectl top nodes
 
-## 16. Trabalhando com Volumes:
+## 16. Trabalhando com Volumes e Storage Classes:
 
-    kubectl create -f <nome-do-arquivo-de-manifesto-com-volume>.yaml
-    kubectl exec -it <nome-do-pod> --container <nome-do-container> -- /bin/sh
+    kubectl create storageclass <nome-da-storageclass> --provisioner=<provisioner> --dry-run=client -o yaml
+    kubectl get storageclass
+    kubectl describe storageclass <nome-da-storageclass>
+
+    kubectl create pv <nome-do-pv> --capacity=<tamanho-do-armazenamento> --access-modes=<modos-de-acesso> --storage-class=<nome-da-storageclass> --host-path=/caminho/no/nodo --dry-run=client -o yaml
+    kubectl get pv
+    kubectl describe pv <nome-do-pv>
+
+    kubectl create pvc <nome-do-pvc> --access-modes=<modos-de-acesso> --storage-class=<nome-da-storageclass> --resources=requests.storage=<tamanho-do-armazenamento> --dry-run=client -o yaml
+    kubectl get pvc
+    kubectl describe pvc <nome-do-pvc>
 
 ## 17. Acesso a Pods via Port Forwarding: 
 
@@ -136,4 +145,9 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl run <nome-do-pod> --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env
     kubectl run <nome-do-pod> --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env > command.yaml
     kubectl apply -f command.yaml
-    kubectl exec -it <nome-do-pod> -- bash
+
+## 24 Ingress
+
+    kubectl create ingress <nome-do-ingress> --rule="<hostname-do-ingress>/<path-no-ingress>=<nome-do-servico>:<porta-do-servico>" --dry-run=client -o yaml
+    kubectl get ingresses
+    kubectl describe ingress <nome-do-ingress>
