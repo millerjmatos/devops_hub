@@ -27,6 +27,7 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl get pods -A
     kubectl describe pod <nome-do-pod>
     kubectl get pod <nome-do-pod> -o yaml
+    kubectl get pod -n <nome-do-namespace>
 
 ## 5. Edição e Substituição de Pods:
 
@@ -56,7 +57,9 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
     kubectl cluster-info
     kubectl api-resources
-    kubectl get nodes
+    kubectl get 
+    kubectl describe node <nome-do-node>
+    kubectl cluster-info
 
 ## 10. Logs de um Pod:
 
@@ -151,3 +154,13 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl create ingress <nome-do-ingress> --rule="<hostname-do-ingress>/<path-no-ingress>=<nome-do-servico>:<porta-do-servico>" --dry-run=client -o yaml
     kubectl get ingresses
     kubectl describe ingress <nome-do-ingress>
+
+## 25 Gerenciamento da Arquitetura, Instalação e Configuração do Cluster:
+
+    cat /etc/kubernetes/manifests/etcd.yaml |grep 'listen\|server\|crt'
+
+    ETCDCTL_API=3 etcdctl --endpoints=<endereco-etcd:porta> --cacert=<ca.crt> --cert=<server.crt> --key=<server.key> snapshot save <caminho-do-backup>
+    ETCDCTL_API=3 etcdctl -w table snapshot status <caminho-do-backup>
+    ETCDCTL_API=3 etcdctl --data-dir=/var/lib/etcd-backup snapshot restore <caminho-do-backup>
+    vim /etc/kubernetes/manifests/etcd.yaml -> path: /var/lib/etcd-backup
+    systemctl restart kubelet
