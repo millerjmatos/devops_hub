@@ -68,6 +68,7 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 ## 11. Escalonamento de Pods:
 
     kubectl scale deployment <nome-do-deployment> --replicas=<número-de-replicas>
+    kubectl scale rs <nome-do-replicaset> --replicas=<número-de-replicas>
     kubectl autoscale deployment <nome-do-deployment> --min=<min-replicas> --max=<max-replicas> --cpu-percent=<percentual-de-uso-da-cpu>
 
 ## 12. Atualização de Imagens de Containers:
