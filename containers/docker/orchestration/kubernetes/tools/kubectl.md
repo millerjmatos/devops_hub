@@ -28,6 +28,7 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl describe pod <nome-do-pod>
     kubectl get pod <nome-do-pod> -o yaml
     kubectl get pod -n <nome-do-namespace>
+    kubectl get pods --selector <key=value>
 
 ## 5. Edição e Substituição de Pods:
 
@@ -165,3 +166,8 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     ETCDCTL_API=3 etcdctl --data-dir=/var/lib/etcd-backup snapshot restore <caminho-do-backup>
     vim /etc/kubernetes/manifests/etcd.yaml -> path: /var/lib/etcd-backup
     systemctl restart kubelet
+
+## 26 Scheduling
+
+    kubectl taint node <nome-do-node> <key=value:effect>
+    kubectl taint node <nome-do-node> <key=value:effect>-
