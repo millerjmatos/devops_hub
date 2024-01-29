@@ -26,9 +26,11 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl get pods -o wide
     kubectl get pods -A
     kubectl describe pod <nome-do-pod>
+    kubectl describe nodes <nome-do-node>
     kubectl get pod <nome-do-pod> -o yaml
     kubectl get pod -n <nome-do-namespace>
     kubectl get pods --selector <key=value>
+    kubectl get nodes <nome-do-node> --show-labels
 
 ## 5. Edição e Substituição de Pods:
 
@@ -86,6 +88,7 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl create namespace <nome-do-namespace>
     kubectl get namespaces
     kubectl get all -n <nome-do-namespace>
+    kubectl get all --all-namespaces
 
 ## 15. Monitoramento de Recursos:
 
@@ -171,3 +174,4 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
     kubectl taint node <nome-do-node> <key=value:effect>
     kubectl taint node <nome-do-node> <key=value:effect>-
+    kubectl label node <nome-do-node> <key=value>
