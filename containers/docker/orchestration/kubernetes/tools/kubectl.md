@@ -175,3 +175,5 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl taint node <nome-do-node> <key=value:effect>
     kubectl taint node <nome-do-node> <key=value:effect>-
     kubectl label node <nome-do-node> <key=value>
+    kubectl get sa <nome-do-scheduling> -n <nome-do-namespace>
+    kubectl get clusterrolebinding
