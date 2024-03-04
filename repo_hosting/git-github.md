@@ -16,9 +16,21 @@ Configuração básica para os commits:
 
 	git config user.email
 
+Método com chave SSH (recomendado):
+
+	apt install openssh-client openssh-server
+
+	ssh-keygen
+
+	cat ~/.ssh/id_rsa.pub
+
+Copie e cole o código em: https://github.com/settings/keys 
+
+	> New SSH key
+
 Clonando um repositório do github localmente:
 
-	git clone https://github.com/user/<nome_do_repositorio>.git
+	git clone <url-do-repositório>
 
 Atualizando o repositório local:
 
