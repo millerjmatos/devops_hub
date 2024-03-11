@@ -155,8 +155,11 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
     kubectl apply -f command.yaml
 
 ## 24 Ingress
-
-    kubectl create ingress <nome-do-ingress> --rule="<hostname-do-ingress>/<path-no-ingress>=<nome-do-servico>:<porta-do-servico>" --dry-run=client -o yaml
+   
+    kubectl create ingress <nome-do-ingress> --rule="<path=service-name:port>" --dry-run=client -o yaml
+    
+    kubectl create ingress <nome-do-ingress> --rule="<host/path=service-name:port>" --dry-run=client -o yaml
+    
     kubectl get ingresses
     kubectl describe ingress <nome-do-ingress>
 
