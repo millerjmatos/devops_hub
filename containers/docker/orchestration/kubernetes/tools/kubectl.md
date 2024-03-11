@@ -14,9 +14,9 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 ## 3. Criando o Primeiro Pod:
 
-    kubectl run primeiro-pod --image nginx:latest
-    kubectl run nginx --image nginx -o yaml --dry-run=client
-    kubectl run <nome-do-pod> --image nginx -o yaml --dry-run=client > <nome-do-arquivo>.yaml
+    kubectl run primeiro-pod --image=<nome-da-imagem>:latest
+    kubectl run nginx --image=<nome-da-imagem> -o yaml --dry-run=client
+    kubectl run <nome-do-pod> --image=<nome-da-imagem> -o yaml --dry-run=client > <nome-do-arquivo>.yaml
     kubectl apply -f <nome-do-arquivo>.yaml
 
 ## 4. Verificando e Examinando Pods:
@@ -149,17 +149,16 @@ Documentação: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 ## 23. Entrypoint e Argumentos em Containers:
 
-    kubectl run <nome-do-pod> --image nginx --command -- /bin/sh -c "echo 'Olá, Kubernetes!'"
-    kubectl run <nome-do-pod> --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env
-    kubectl run <nome-do-pod> --image nginx --command --dry-run=client -o yaml -- /bin/sh -c env > command.yaml
-    kubectl apply -f command.yaml
+
+    kubectl run <nome-do-pod> --image=<nome-da-imagem> --port=<> --env=<name>=<value> --replicas=<>
+    kubectl run <nome-do-pod> --image=<nome-da-imagem> --command -- sleep 3600
+    kubectl run <nome-do-pod> --image=<nome-da-imagem> --command -- /bin/sh -c "echo 'Olá, Kubernetes!'"
+    kubectl run <nome-do-pod> --image=<nome-da-imagem> --command --dry-run=client -o yaml -- /bin/sh -c env > command.yaml
 
 ## 24 Ingress
    
     kubectl create ingress <nome-do-ingress> --rule="<path=service-name:port>" --dry-run=client -o yaml
-    
     kubectl create ingress <nome-do-ingress> --rule="<host/path=service-name:port>" --dry-run=client -o yaml
-    
     kubectl get ingresses
     kubectl describe ingress <nome-do-ingress>
 
